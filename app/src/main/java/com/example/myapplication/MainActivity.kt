@@ -47,8 +47,8 @@ class MainActivity : AppCompatActivity() {
             updateStudent()
         }
 
-        // ❌ KHÔNG cần setOnItemClickListener nữa
-        // vì mình xử lý click item ngay trong getView() của adapter
+      
+        
     }
 
     private fun addStudent() {
@@ -128,14 +128,14 @@ class MainActivity : AppCompatActivity() {
             holder.tvHoTen.text = student.hoTen
             holder.tvMssv.text = student.mssv
 
-            // 👉 Click vào CẢ ITEM: load dữ liệu lên EditText để Update
+            //  Click vào CẢ ITEM: load dữ liệu lên EditText để Update
             view.setOnClickListener {
                 edtMssv.setText(student.mssv)
                 edtHoTen.setText(student.hoTen)
                 selectedIndex = position
             }
 
-            // 👉 Click vào nút Delete: xóa phần tử
+            //  Click vào nút Delete: xóa phần tử
             holder.btnDelete.setOnClickListener {
                 data.removeAt(position)
                 notifyDataSetChanged()
@@ -154,7 +154,7 @@ class MainActivity : AppCompatActivity() {
             return view
         }
 
-        // bạn đã sửa thành inner rồi thì cứ để vậy:
+       
         private inner class ViewHolder(
             val tvHoTen: TextView,
             val tvMssv: TextView,
